@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.idpa.vorprojekt.heizkostenberechner.ControllerSchlusstabelle">
+   <children>
+      <TableView fx:id="tableViewSchlusstabelle" layoutX="20.0" layoutY="80.0" prefHeight="250.0" prefWidth="595.0" AnchorPane.leftAnchor="21.0">
+        <columns>
+            <TableColumn fx:id="heizungsart" maxWidth="-1.0" minWidth="80.0" prefWidth="-1.0" text="Heizungsart" />
+            <TableColumn fx:id="energieverbrauch" maxWidth="-1.0" minWidth="155.0" prefWidth="160.0" text="Energieverbrauch / Monat" />
+            <TableColumn fx:id="costs" maxWidth="-1.0" minWidth="80.0" prefWidth="-1.0" text="Kosten/kWh" />
+            <TableColumn fx:id="preispromonat" minWidth="90.0" prefWidth="75.0" text="Preis / Monat" />
+            <TableColumn fx:id="prozentualeAbweichung" editable="false" maxWidth="-1.0" minWidth="185.0" prefWidth="185.0" text="Abweichung % (Preis / Monat)" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblSchlusstabelle" layoutX="20.0" layoutY="20.0" text="Schlusstabelle">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

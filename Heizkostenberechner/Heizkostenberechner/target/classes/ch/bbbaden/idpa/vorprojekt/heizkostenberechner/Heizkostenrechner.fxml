@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Heizkostenrechner" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.idpa.vorprojekt.heizkostenberechner.ControllerBerechner">
+   <children>
+      <Label fx:id="lblTitel" layoutX="20.0" layoutY="20.0" text="Heizkostenrechner">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWelcome" layoutX="20.0" layoutY="65.0" prefHeight="18.0" prefWidth="458.0" text="Geben Sie Ihre Daten ein um Ihre Heizkosten mit den aktuellsten Daten zu berechnen." />
+      <Label fx:id="lblQm" layoutX="20.0" layoutY="117.0" prefHeight="18.0" prefWidth="300.0" text="Bitte geben Sie Ihre Wohnungsgrösse in Quadratmetern" />
+      <Label fx:id="lblRaumhoehe" layoutX="20.0" layoutY="173.0" prefHeight="18.0" prefWidth="300.0" text="Bitte geben Sie Ihre Raumhöhe in Meter" />
+      <Label fx:id="lblArt" layoutX="20.0" layoutY="229.0" prefHeight="18.0" prefWidth="300.0" text="Bitte wählen Sie Ihre Heizungsart aus" />
+      <ChoiceBox fx:id="choiceBoxArt" layoutX="20.0" layoutY="247.0" prefHeight="25.0" prefWidth="300.0" />
+      <Label fx:id="lblTemperatur" layoutX="20.0" layoutY="283.0" prefHeight="18.0" prefWidth="300.0" text="Bitte geben Sie die gewünschte Temperatur ein" />
+      <Slider fx:id="sliderTemperatur" blockIncrement="1.0" layoutX="20.0" layoutY="301.0" majorTickUnit="10.0" max="30.0" min="10.0" minorTickCount="5" prefWidth="300.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+      <Button fx:id="btnBerechnen" layoutX="234.0" layoutY="346.0" mnemonicParsing="false" onAction="#onBerechnen" prefHeight="25.0" prefWidth="85.0" text="Berechnen" />
+      <TableView fx:id="tableViewLive" layoutX="335.0" layoutY="117.0" maxHeight="200.0" maxWidth="240.0" minHeight="200.0" minWidth="240.0" prefHeight="200.0" prefWidth="240.0">
+        <columns>
+          <TableColumn fx:id="colBeschriftung" maxWidth="-1.0" minWidth="140.0" prefWidth="-1.0" text="Bezeichnung" />
+          <TableColumn fx:id="colWert" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Wert" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSchlusstabelle" layoutX="494.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSchlusstabelle" prefHeight="26.0" prefWidth="90.0" text="Schlusstabelle" />
+      <Spinner fx:id="spinnerQm" layoutX="20.0" layoutY="135.0" prefHeight="25.0" prefWidth="300.0" />
+      <Spinner fx:id="spinnerHöhe" layoutX="20.0" layoutY="191.0" prefHeight="25.0" prefWidth="300.0" />
+      <Label fx:id="lblTemperaturJetzt" layoutX="20.0" layoutY="345.0" prefHeight="18.0" prefWidth="209.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError" layoutX="20.0" layoutY="91.0" prefHeight="18.0" prefWidth="555.0" style="-fx-text-fill: #ff0000;" />
+   </children>
+</AnchorPane>
